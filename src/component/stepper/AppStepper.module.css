@@ -1,0 +1,39 @@
+.stepper_actions {
+    background-color: white;
+    padding: 1rem;
+    border-top: .3px solid rgba(0, 0, 0, 0.205);
+}
+
+.stepper_actions button{
+    height: 42px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 140, 115);
+    box-shadow: rgb(40 54 61 / 18%) 1px 2px 10px;
+    border: none;
+    padding: 0px 48px;
+    font-family: Averta, Roboto, "Helvetica Neue", Arial, "Segoe UI", Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+    text-transform: none;
+    border-radius: 8px;
+    letter-spacing: 0px;
+    cursor: pointer;
+    
+}
+
+.stepper_actions button:hover{
+    background-color: rgb(0, 85, 70);
+}
+.stepper_actions button:nth-child(2){
+    height: 42px;
+    color: rgb(0, 20, 40);
+    background-color: transparent;
+    border: 2px solid rgb(0, 20, 40);
+    margin-left: 1rem;
+}
+
+.stepper_actions button:nth-child(2):hover{
+    color: rgb(255, 255, 255);
+    background-color: rgb(93, 109, 116);
+    border: 2px solid rgb(93, 109, 116);
+}

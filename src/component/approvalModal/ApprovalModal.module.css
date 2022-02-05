@@ -1,0 +1,17 @@
+.approval_modal {
+    padding: 1rem;
+    width: 900px;
+    background-color: white;
+    height: 600px;
+    overflow: scroll;
+}
+
+
+
+.approval_modal_content {display: flex; flex-direction: column;}
+
+
+.transaction_cards {
+    display: flex;
+
+}

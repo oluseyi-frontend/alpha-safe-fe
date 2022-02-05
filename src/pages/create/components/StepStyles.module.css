@@ -1,0 +1,155 @@
+.step {
+    background-color: white;
+    padding: 2rem 2rem;
+  
+    box-shadow: 0 0 10px 0 rgb(33 48 77 / 10%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+
+.step_heading {
+    display: flex;
+    justify-content: center;
+}
+
+.step_action {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.step_action button{
+    min-width: 240px;
+    min-height: 42px;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: rgb(0, 140, 115);
+    box-shadow: rgb(40 54 61 / 18%) 1px 2px 10px;
+    border: none;
+    padding: 0px 48px;
+    font-size: 16px;
+    line-height: 22px;
+    text-transform: none;
+    border-radius: 8px;
+    letter-spacing: 0px;
+    cursor: pointer;
+}
+
+
+.step_action button:hover{
+    background-color: rgb(0, 14, 28);
+}
+
+.step_owners_content {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.owners_content_table {
+    margin-bottom: 1rem;
+}
+
+.owners_content_table table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.owners_content_table thead td {
+    padding: .6rem 0;
+    border-top: .3px solid rgba(0, 0, 0, 0.185);
+    border-bottom: .3px solid rgba(0, 0, 0, 0.185);
+}
+
+.owners_content_table tbody td {
+    padding: .8rem 0;
+    padding-right: .8rem;
+}
+.owner_addr {
+    width: 100%;
+}
+
+.owner_addr input {
+    width: 100%;
+    min-height: 35px;
+    padding: 0 .7rem;
+    outline: none;
+    background-color: #d1eee9;
+    border: none;
+}
+
+.owner_actions{
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+.add_owner_btn{
+    display: flex;
+    justify-content: center;
+}
+
+.add_owner_btn button{
+   min-height: 35px;
+   background-color: transparent;
+   border: none;
+  color: #008C73;
+  padding: 0 1rem;
+  cursor: pointer;
+
+}
+
+.add_owner_btn button:hover{
+    border-radius: 3px;
+    background-color: rgba(0, 140, 115, 0.04);
+}
+
+
+.transaction_confirmation {
+margin-top: 1rem;
+display: flex;
+justify-content: center;
+}
+
+.transaction_confirmation label {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.transaction_confirmation label select {
+    margin-top: .5rem;
+    min-height: 35px;
+    outline: none;
+    background-color: #d1eee9;
+    border: none;
+
+}
+
+.review{
+    display: flex;
+    flex-direction: column;
+}
+
+.review_wallet{
+    margin-bottom: 1rem;
+}
+
+.review_wallet p:nth-child(1){
+font-weight: 800;
+}
+.review_confirmations p:nth-child(1){
+    font-weight: 800;
+    }
+

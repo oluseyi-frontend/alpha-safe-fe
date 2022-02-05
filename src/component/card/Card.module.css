@@ -1,0 +1,58 @@
+.card_header {
+    margin-bottom: 1rem;
+}
+
+.card_body {
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+
+.card_form {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.card_form input{
+    margin: .5rem 0;
+    height: 42px;
+    padding: 0 .8rem;
+    border-radius: 5px;
+    border: none;
+    box-shadow: rgb(40 54 61 / 18%) 1px 2px 10px;
+outline: none;
+}
+
+
+.card_form input:hover {
+
+}
+
+.card_btn {
+    display: flex;
+    padding: .5rem;
+    
+}
+.card_btn button{
+    height: 42px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 140, 115);
+    box-shadow: rgb(40 54 61 / 18%) 1px 2px 10px;
+    border: none;
+    padding: 0px 48px;
+    font-size: 16px;
+    line-height: 22px;
+    text-transform: none;
+    border-radius: 8px;
+    letter-spacing: 0px;
+    cursor: pointer;
+}
+
+.card_btn button:hover{
+   
+        background-color: rgb(0, 85, 70);
+    
+}

@@ -1,0 +1,35 @@
+.card_header {
+    margin-bottom: .5rem;
+}
+
+.card_body {
+
+}
+
+.card_body p{
+    margin: .5rem 0;
+}
+
+.card_btn {
+    padding: 0 .5rem;
+padding-bottom: 1rem;
+display: flex;
+justify-content: center;
+}
+
+.card_btn button{
+    box-shadow: rgb(40 54 61 / 18%) 1px 2px 10px;
+    border: none;
+    min-width: 240px;
+    height: 42px;
+    color: rgb(0, 20, 40);
+    background-color: transparent;
+    border: .2px solid rgb(0, 20, 40);
+    cursor: pointer;
+}
+
+.card_btn button:hover{
+    color: rgb(255, 255, 255);
+    background-color: rgb(93, 109, 116);
+    border: 2px solid rgb(93, 109, 116);
+}
