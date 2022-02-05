@@ -29,7 +29,7 @@ const Create = () => {
   const [walletAddr, setWalletAddr] = useState("");
 
   useEffect(() => {
-    if(fields.length == 0){
+    if(fields.length > 0){
       const owners = fields.map((field) => {
         return field.addr.toLowerCase();
       });
