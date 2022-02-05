@@ -13,12 +13,12 @@ export const connectors = [
     connectorId: "injected",
     priority: 1,
   },
-  {
-    title: "WalletConnect",
-    icon: WalletConnect,
-    connectorId: "walletconnect",
-    priority: 2,
-  },
+  // {
+  //   title: "WalletConnect",
+  //   icon: WalletConnect,
+  //   connectorId: "walletconnect",
+  //   priority: 2,
+  // },
 //   {
 //     title: "Trust Wallet",
 //     icon: TrustWallet,

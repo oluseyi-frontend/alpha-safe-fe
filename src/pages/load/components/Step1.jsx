@@ -28,8 +28,9 @@ const Step1 = () => {
     toggle("wallet-modal");
   };
 
-  const handleDisconnectWallet=()=>{
-logout()
+  const handleDisconnectWallet=async()=>{
+ await logout()
+ window.localStorage.removeItem("connectorId");
   }
 
  

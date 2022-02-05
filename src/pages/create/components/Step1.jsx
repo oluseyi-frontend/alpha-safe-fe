@@ -5,7 +5,7 @@ import useModal from "../../../custom hooks/useModal";
 import AppBackdrop from "../../../component/appBackdrop/AppBackdrop";
 import WalletsModal from "../../../component/walletsModal/WalletModal";
 import { useMoralis, useChain } from "react-moralis";
-import { chainPropTypes } from "@mui/utils";
+
 
 const Step1 = () => {
   const { toggle, isWalletModalShowing } = useModal();
@@ -25,6 +25,7 @@ const Step1 = () => {
   }, [isAuthenticated]);
 
   const handleConnect = async (connectorID) => {
+    console.log(connectorID)
     try {
       await authenticate({ provider: connectorID });
       enableWeb3({ provider: connectorID });
@@ -37,9 +38,10 @@ const Step1 = () => {
     toggle("wallet-modal");
   };
 
-  const handleDisconnectWallet = () => {
-    logout();
-  };
+  const handleDisconnectWallet=async()=>{
+    await logout()
+    window.localStorage.removeItem("connectorId");
+     }
 
   const handleSwitchNetwork = () => {
     switchNetwork(0x4);

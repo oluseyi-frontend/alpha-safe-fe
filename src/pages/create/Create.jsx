@@ -1,7 +1,6 @@
 import {
   CircularProgress,
   Container,
-  LinearProgress,
   Typography,
 } from "@mui/material";
 import React, { useState, useEffect } from "react";
