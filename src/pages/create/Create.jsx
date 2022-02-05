@@ -29,18 +29,23 @@ const Create = () => {
   const [walletAddr, setWalletAddr] = useState("");
 
   useEffect(() => {
+   
     if(fields.length > 0){
       const owners = fields.map((field) => {
         return field.addr.toLowerCase();
       });
-  
+      
       setOwners(owners);
     }
+  
     
   }, [fields]);
 
   useEffect(() => {
-    setFields([{ addr: account, id: uuidv4() }]);
+    if(account != null){
+      setFields([{ addr: account, id: uuidv4() }]);
+    }
+    
   }, [account]);
 
   useEffect(() => {
