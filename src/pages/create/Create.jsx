@@ -29,11 +29,14 @@ const Create = () => {
   const [walletAddr, setWalletAddr] = useState("");
 
   useEffect(() => {
-    const owners = fields.map((field) => {
-      return field.addr.toLowerCase();
-    });
-
-    setOwners(owners);
+    if(fields.length == 0){
+      const owners = fields.map((field) => {
+        return field.addr.toLowerCase();
+      });
+  
+      setOwners(owners);
+    }
+    
   }, [fields]);
 
   useEffect(() => {
