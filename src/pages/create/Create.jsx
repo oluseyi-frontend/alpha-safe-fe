@@ -17,6 +17,7 @@ import Moralis from "moralis";
 import walletContract from "./../../contract/Wallet.json";
 import { Link } from "react-router-dom";
 import axios from "axios";
+
 const Create = () => {
   const { account, enableWeb3, provider } = useMoralis();
   const [signer, setSigner] = useState();
@@ -26,18 +27,23 @@ const Create = () => {
   const [creating, setCreating] = useState(false);
   const [loading, setLoading] = useState(false);
   const [walletAddr, setWalletAddr] = useState("");
+const [mainOwners, setMainOwners] = useState([])
 
   useEffect(() => {
    
     if(fields.length > 0){
-      const owners = fields.map((field) => {
-        return field.addr.toLowerCase();
+      const owners = fields.filter((field) => {
+        if(field.addr != ''){
+         
+          return field.addr.toLowerCase();
+        }else {
+          return null
+        }
+      
       });
       
       setOwners(owners);
     }
-  
-    
   }, [fields]);
 
   useEffect(() => {
@@ -50,6 +56,13 @@ const Create = () => {
   useEffect(() => {
     handleGetWeb3Provider();
   }, [provider]);
+
+  useEffect(()=>{
+   const tempMainOwners = owners.map((owner)=>{
+return owner.addr
+    })
+    setMainOwners(tempMainOwners)
+  }, [owners])
 
   const handleGetWeb3Provider = async () => {
     if (provider) {
@@ -71,14 +84,17 @@ const Create = () => {
 
       //Moralis.web3Library.ContractFactory()
 
-      const contract = await walletFactory.deploy(owners, quorum);
-      setLoading(false);
+      const contract = await walletFactory.deploy(mainOwners, quorum);
+    
+      setInterval(()=>{
+        setLoading(false);
+      }, 10000)
 
       setWalletAddr(contract.address.toLowerCase());
       axios
         .post("https://alpha-safe-test.herokuapp.com/create", {
           addr: contract.address.toLowerCase(),
-          owners,
+         mainOwners,
         })
         .then((data) => {})
         .catch((err) => {});

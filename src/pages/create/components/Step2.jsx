@@ -24,7 +24,7 @@ const Step2 = ({ fields, setFields, quorum, setQuorum }) => {
 
   const handleChange = (event, id) => {
     const { value, name } = event.target;
-    console.log(id);
+    
     const tempField = [...fields];
     const index = fields.findIndex((field) => {
       return field.id === id;
